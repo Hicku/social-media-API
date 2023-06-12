@@ -16,13 +16,13 @@ const seeds = [
   {
     username: 'john_doe',
     email: 'john@example.com',
-    thoughts: [], 
+    comments: [], 
     friends: [], 
   },
   {
     username: 'jane_smith',
     email: 'jane@example.com',
-    thoughts: [],
+    comments: [],
     friends: [],
   },
  
@@ -32,7 +32,7 @@ const seeds = [
 async function seedUsers() {
   try {
     // Delete existing users (optional)
-    await User.deleteMany().maxTimeMS(30000);
+    await User.deleteMany();
 
     // Insert the seed data
     const createdUsers = await User.insertMany(seeds);
@@ -42,7 +42,7 @@ async function seedUsers() {
     console.error('Error seeding users:', error);
   } finally {
     // Close the database connection (if required)
-    // mongoose.connection.close();
+
   }
 }
 

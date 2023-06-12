@@ -14,7 +14,7 @@ const userSchema = new Schema(
       unique: true,
       validate: [validator.isEmail, "Invalid"],
     },
-    thoughts: [
+    comments: [
       {
         type: Schema.Types.ObjectId,
         ref: "Comment",

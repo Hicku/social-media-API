@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 const moment = require("moment"); 
 
-const commentSchema = new Schema = (
+const commentSchema = new Schema (
     {
         comment: {
             type: String,
@@ -21,6 +21,10 @@ const commentSchema = new Schema = (
             getters: true,
         },
     })
+
+    function formatDate(date) {
+        return moment(date).format("DD/MM/YY HH:mm");
+      }
 
     const Comment = model("comment", commentSchema);
 

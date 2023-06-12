@@ -1,9 +1,10 @@
 const { Schema, model } = require("mongoose");
+const reactionSchema = require("./reaction");
 const moment = require("moment"); 
 
-const commentSchema = new Schema (
+const thoughtsSchema = new Schema (
     {
-        comment: {
+        thought: {
             type: String,
             required: true,
             minlength: 1
@@ -26,9 +27,9 @@ const commentSchema = new Schema (
         return moment(date).format("DD/MM/YY HH:mm");
       }
 
-    const Comment = model("comment", commentSchema);
+    const Thought = model("thought", thoughtsSchema);
 
-    module.exports = Comment; 
+    module.exports = Thought; 
 
 
 

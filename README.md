@@ -32,8 +32,10 @@ Example body:
 
 View all Users
 GET localhost:3001/api/users
+
 View a single User
 GET localhost:3001/api/users/:userId
+
 Update a User
 PUT localhost:3001/api/users/:userId
 Example body:
@@ -43,41 +45,55 @@ Example body:
 }
 Delete User
 DELETE localhost:3001/api/users/:userId
+
 Add Friend
 POST localhost:3001/api/users/:userId/friends/:friendId
+
 Remove Friend
 DELETE localhost:3001/api/users/:userId/friends/:friendId
+
 Thought Routes
 Create Thought
 POST localhost:3001/api/thoughts
 Example body:
+
 
 {
   "thoughtText": "Who's thinkin?",
   "username": "Big ol' user",
   "userId": "648745432e1518dbfbaeb2db"
 }
+
+
 View all Thoughts
 GET localhost:3001/api/thoughts
+
 View a single thought
 GET localhost:3001/api/thoughts/:thoughtId
+
 Update a thought
 PUT localhost:3001/api/thoughts/:thoughtId
+
 Example body:
 
 {
     "thoughtText": "Thinkin' thinkin' thinkin'"
 }
+
+
 Delete a thought
 DELETE localhost:3001/api/thoughts/:thoughtId
+
 Add a Reaction
 POST localhost:3001/api/thoughts/:thoughtId/reactions
+
 Example Body:
 
 {
 	"reactionBody": "Thinkin' thoughts",
 	"username": "Big ol' user"
 }
+
 Remove a Reaction
 DELETE localhost:3001/api/thoughts/:thoughtId/reactions
 Example Body:
